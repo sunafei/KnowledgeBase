@@ -2,8 +2,8 @@ FROM node
 
 RUN npm install -g docsify-cli@latest
 
-RUN mkdir /app
-COPY summary /app/summary
+RUN mkdir /app/summary
+COPY docs /app/summary
 
 WORKDIR /app/summary/docs
 
