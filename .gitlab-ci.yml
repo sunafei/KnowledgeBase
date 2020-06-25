@@ -3,4 +3,4 @@ stages:
 build:
   stage: build
   script:
-    - cp -r docs /www/wwwroot/summary
+    - nginx -s reload
