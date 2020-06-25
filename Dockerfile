@@ -3,7 +3,7 @@ FROM node
 RUN npm install -g docsify-cli@latest
 
 RUN mkdir /summary
-COPY docs /summary
+COPY docs /summary/docs
 
 WORKDIR /summary/docs
 
