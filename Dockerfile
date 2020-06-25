@@ -1,6 +1,6 @@
 FROM node
 
-RUN apk add --no-cache tini && npm install -g docsify-cli@latest
+RUN npm install -g docsify-cli@latest
 
 RUN mkdir /app
 COPY summary /app/summary
