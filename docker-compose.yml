@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  summary:
+    restart: always
+    image: sunafei/summary
+    container_name: summary
+    ports:
+      - 3000:3000

@@ -1,23 +1,13 @@
 stages:
   - build
   - run
-#  - clean
 build:
   stage: build
   script:
-    - /usr/local/maven/apache-maven-3.6.1/bin/mvn package
-    - cp target/xsh-api-1.0.jar docker
-    - cd docker
-    - docker build -t sunafei/xsh .
+    - docker build -t sunafei/summary .
 run:
   stage: run
   script:
-    - cd docker
-    - docker-compose -version
     - docker-compose stop
     - docker-compose rm
     - docker-compose up -d
-#clean:
-#  stage: clean
-#  script:
-#    - docker rmi $(docker images -q -f dangling=true)
