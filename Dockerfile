@@ -7,7 +7,6 @@ COPY docs /summary
 
 WORKDIR /summary/docs
 
-ENTRYPOINT ["/sbin/tini", "--"]
 CMD [ "docsify", "serve", "." ]
 
 EXPOSE 3000
