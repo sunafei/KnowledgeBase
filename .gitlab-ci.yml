@@ -1,13 +1,7 @@
 stages:
   - build
-  - run
 build:
   stage: build
   script:
-    - docker build -t sunafei/summary .
-run:
-  stage: run
-  script:
-    - docker-compose stop
-    - docker-compose rm
-    - docker-compose up -d
+    - mkdir /www/wwwroot/summary
+    - cp -r /docs /www/wwwroot/summary/docs
