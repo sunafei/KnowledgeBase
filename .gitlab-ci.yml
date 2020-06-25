@@ -3,4 +3,4 @@ stages:
 build:
   stage: build
   script:
-    - nginx -s reload
+    - ls
