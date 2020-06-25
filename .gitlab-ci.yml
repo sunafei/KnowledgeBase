@@ -3,5 +3,4 @@ stages:
 build:
   stage: build
   script:
-    - sudo mkdir /www/wwwroot/summary
     - sudo cp -r /docs /www/wwwroot/summary/docs
