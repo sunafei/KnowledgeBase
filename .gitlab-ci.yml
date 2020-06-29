@@ -3,4 +3,4 @@ stages:
 build:
   stage: build
   script:
-    - ls
+    - cp -r /docs /www/wwwroot/summary/docs
