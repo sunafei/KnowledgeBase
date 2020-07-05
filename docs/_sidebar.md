@@ -1,5 +1,6 @@
 * [首页](README.md)
 * [java基础](java.md)
+* [UML](uml/类图.md)
 * [spring](java.md)
 * [spring boot](java.md)
 * [spring cloud](java.md)
@@ -11,4 +12,9 @@
 * [docker](docker/介绍.md)
 ** [安装](docker/安装.md)
 ** [常用命令](docker/常用命令.md)
-* [nginx](java.md)
+* nginx
+** [安装](nginx/安装.md)
+** [配置文件](nginx/配置文件.md)
+** [负载均衡](nginx/负载均衡.md)
+** [高可用](nginx/高可用.md)
+* [在线简历](cv/cv.md)
