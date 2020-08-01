@@ -6,13 +6,18 @@
 * [spring cloud](java.md)
 * 数据库
 ** [oracle](db/oracle.md)
+** [mysql](db/mysql.md)
+** [redis](db/redis.md)
+** [事务](db/事务.md)
+** [mongodb](db/mongodb.md)
 * linux
 ** [centeros常用命令](linux/centeros常用命令.md)
 ** [ubuntu常用命令](linux/ubuntu常用命令.md)
-** [部署javaweb环境](linux/部署javaweb环境)
+** [部署J2EE项目](linux/部署J2EE项目.md)
 * [docker](docker/介绍.md)
 ** [安装](docker/安装.md)
 ** [常用命令](docker/常用命令.md)
+** [Dockerfile命令](docker/Dockerfile命令.md)
 * nginx
 ** [安装](nginx/安装.md)
 ** [配置文件](nginx/配置文件.md)

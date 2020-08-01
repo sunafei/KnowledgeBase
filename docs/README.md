@@ -1,10 +1,25 @@
-##### 个人知识库
->2020-07-01开始，算是自己搭建了一个云笔记 使用技术为docsify 
 
-##### 个人小项目
-个人兴趣开发的项目，记录亲友生日、记事本、密码本等，访问地址 [https://xsh.sunaf.top](https://xsh.sunaf.top)  
-麻雀虽小，五脏俱全，搭配的也有小程序  
-![小程序](http://knowledgebase-oss.oss-cn-beijing.aliyuncs.com/wx-sm.png)
+> 2020-07-01 为什么不做个高级点的记事本？🏃🏃🏃💃💃💃
+
+### 技术学习项目
+> java8新特性 https://github.com/sunafei/stu-java8
+> 
+> 认证授权 https://github.com/sunafei/stu-spring-security
+> 
+> SpringCloud https://github.com/sunafei/stu-spring-cloud-netflix
+> 
+> Dubbo
+> 
+> ActiveMQ
+> 
+> 
+> 
+
+### 个人网站
+> 个人兴趣开发的项目，记录亲友生日、记事本、密码本等  
+> 后端 https://xsh.sunaf.top  
+> 前端   
+> 小程序![小程序](http://knowledgebase-oss.oss-cn-beijing.aliyuncs.com/wx-sm.png)
 
 
 
