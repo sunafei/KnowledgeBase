@@ -10,7 +10,7 @@ exp username/password@orcl file=c:\xxx.dmp grants=no consistent=y
 ```
 sqlplus
 sys
-eplugger as sysdba
+password as sysdba
 ```
 
 ### 创建数据库
@@ -25,15 +25,14 @@ next 50m maxsize 20480m
 extent management local;
 
 # 创建用户
-create user *username* profile default identified by eplugger default tablespace xxx;
+create user username profile default identified by password default tablespace xxx;
 
 # 给用户授权
-grant connect,resource,dba to RDSYSEDUV82310002;
+grant connect,resource,dba to username;
 
 # 删除表空间
-Drop tablespace RDSYSEDUV8 INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
+Drop tablespace username INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
 
 # 删除用户
-drop user RDSYSEDUV806 cascade;
-
+drop user username cascade;
 ```
