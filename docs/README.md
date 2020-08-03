@@ -6,9 +6,11 @@
 > 
 > 认证授权 https://github.com/sunafei/stu-spring-security
 > 
-> SpringCloud https://github.com/sunafei/stu-spring-cloud-netflix
+> springCloud netflix https://github.com/sunafei/stu-spring-cloud-netflix
 > 
-> Dubbo
+> springCloud Alibaba  https://github.com/sunafei/stu-spring-cloud-alibaba
+> 
+> Dubbo 
 > 
 > ActiveMQ
 > 
@@ -24,3 +26,4 @@
 
 
 
+c0b47a1b9d518b18fa96fe8461dee06c362f0fb2 
