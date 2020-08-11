@@ -47,6 +47,7 @@ yum install -y net-tools
 netstat -lnpt
 # 检查端口被哪个进程占用
 netstat -lnpt |grep 5672
+ps -ef | grep nginx
 # 查看进程的详细信息
 ps 6832
 ```

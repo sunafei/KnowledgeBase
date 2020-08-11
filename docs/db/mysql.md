@@ -1,8 +1,9 @@
+
 ## 一条SQL语句在MySQL中如何执行的
-• MySQL 主要分为 Server 层和引擎层，Server 层主要包括连接器、查询缓存、分析器、优化器、执行器，同时还有一个日志模块（binlog），这个日志模块所有执行引擎都可以共用,redolog 只有 InnoDB 有。
-• 引擎层是插件式的，目前主要包括，MyISAM,InnoDB,Memory 等。
-• SQL 等执行过程分为两类，一类对于查询等过程如下：权限校验---》查询缓存---》分析器---》优化器---》权限校验---》执行器---》引擎
-• 对于更新等语句执行流程如下：分析器----》权限校验----》执行器---》引擎---redo log prepare---》binlog---》redo log commit
+* MySQL 主要分为 Server 层和引擎层，Server 层主要包括连接器、查询缓存、分析器、优化器、执行器，同时还有一个日志模块（binlog），这个日志模块所有执行引擎都可以共用,redolog 只有 InnoDB 有。
+*引擎层是插件式的，目前主要包括，MyISAM,InnoDB,Memory 等。
+* SQL 等执行过程分为两类，一类对于查询等过程如下：权限校验--->查询缓存--->分析器--->优化器--->权限校验--->执行器--->引擎
+* 对于更新等语句执行流程如下：分析器---->权限校验---->执行器--->引擎---redo log prepare--->binlog--->redo log commit
 
 ## SQL执行顺序
 写的顺序：select ... from... where.... group by... having... order by.. limit  
@@ -42,7 +43,6 @@ ENUM 类型的 ORDER BY 操作效率低，需要额外操作
 • left join 在两张表进行连接查询时，会返回左表所有的行，即使在右表中没有匹配的记录。  
 • right join 在两张表进行连接查询时，会返回右表所有的行，即使在左表中没有匹配的记录。  
 10. 应尽量避免在 where 子句中使用!=或<>操作符，否则将引擎放弃使用索引而进行全表扫描。
-
 ```
 -- 反例
 select age,name  from user where age <>18;
