@@ -15,7 +15,7 @@ password as sysdba
 
 ### 创建数据库
 ```
-# 创建表空间
+-- 创建表空间
 create tablespace xxx
 logging
 datafile 'C:\ORADBDATA\xxx.ora'
@@ -24,15 +24,15 @@ autoextend on
 next 50m maxsize 20480m
 extent management local;
 
-# 创建用户
+-- 创建用户
 create user username profile default identified by password default tablespace xxx;
 
-# 给用户授权
+-- 给用户授权
 grant connect,resource,dba to username;
 
-# 删除表空间
+-- 删除表空间
 Drop tablespace username INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
 
-# 删除用户
+-- 删除用户
 drop user username cascade;
 ```

@@ -17,6 +17,7 @@
 - 熟练使用常见的前端框架，如JS、jQuery等，参与过前后端分离项目开发（Vue+ElementUI+SpringBoot）
 - 掌握Nginx反向代理，web集群和高可用配置，掌握Tomcat配置
 - 使用过消息中间件ActiveMQ
+- 参与过分布式系统开发
 - 参与过微信小程序后台开发
 - 参与过网页爬取相关工作，并进行数据治理
 - 熟悉Linux系统，掌握docker、docker-compose等容器化技术
@@ -28,11 +29,11 @@
 
 # 项目经历
 ### 公司底层平台研发（ 2015年9月 ~ 至今 ）
-#### 项目描述
+##### 项目描述
 公司其他产品线基础平台，提供登陆，授权，数据权限，字典（常量表），标签库，配置化页面，统一导入导出，工作流等功能，供公司产品线高校科研管理系统、医院科研管理系统，科研院所申报平台等进行开发
-#### 涉及技术
+##### 涉及技术
 Spirng、SpringMVC、Hibernate、MongoDB、Redis、Oracle等
-#### 责任描述
+##### 责任描述
 1.统一授权功能设计开发
 遵守RBAC设计规范，实现角色资源权限控制，通过后端代码和前端标签库配合使用达到控制菜单显示、页面操作权限的目的  
 2.统一数据权限设计开发
@@ -43,16 +44,18 @@ Spirng、SpringMVC、Hibernate、MongoDB、Redis、Oracle等
 为满足系统业务数据在不同角色中流转审批等功能，在分析世面上流行的工作流引擎avtiviti和JBPM的基础上，决定自己开发一套工作流组件，使用gooflow作为工作流前端设计器，配合后端代码实现工作流角色流转审批，流程分支条件，用户选择流转、会签、并签等功能      
 5.系统标签库开发
 利用java自定义标签技术创建系统组件库，前端页面只需要配置标签便可以生成列表、新增等页面，通过抽象的实体类字段配置页面展示字段  
-6.使用POI完成统一导入导出功能  
+6.分布式系统支持
+设计系统支持高可用和web集群环境，使用spring-session-data-redis支持系统session共享，通过redis+springcache实现本地缓存共享，利用分布式锁控制定时任务等只执行一次等  
+7.使用POI完成统一导入导出功能  
 
 ### 科研管理系统产品研发（ 2016年9月 ~ 至今 ）
 ##### 项目描述
 公司核心产品，定位是高校科研信息化服务平台，主要功能有项目管理、成果管理、财务管理、财务对接、考核等
 ##### 涉及技术
 Spirng、SpringMVC、Hibernate、MongoDB、Redis、Oracle、JSP等
-#### 责任描述
-1.负责成果管理功能，包括对接论文大数据平台，拉取数据进行数据治理、推送，个人认领数据功能
-2.开发统一模块编号生成功能，配置编号生成规则，自动生成编号  
+##### 责任描述
+1.负责成果管理功能，包括对接论文大数据平台，拉取数据进行数据治理、推送，个人认领数据功能  
+2.开发统一模块编号生成功能，配置编号生成规则，自动生成编号   
 3.使用aspose.words完成word操作、模板导出、pdf转换、添加水印等功能，配合前端pdf展示，实现单据在线生成，预览，打印功能  
 4.系统附件对接高拍仪外接设备  
 5.利用echarts展示系统统计图表  
@@ -63,10 +66,10 @@ Spirng、SpringMVC、Hibernate、MongoDB、Redis、Oracle、JSP等
 针对高校已获取授权的论文网站进行数据获取、数据治理、数据推送、数据认领等
 ##### 涉及技术
 SpringBoot、SpringSecurity、SpringOAuth、MongoDB、Redis、MySQL、ActiveMQ、HttpClient、jsoup、Vue、ElementUI等
-#### 责任描述
+##### 责任描述
 1.数据抓取解析
 分析各个来源的论文网站请求，使用HttpClient抓取论文数据，使用jsoup解析数据，使用MongoDB存储，记录数据爬取日志  
-2.通过SpringSecurity+JWT完成认证和授权操作
+2.通过SpringSecurity+JWT完成认证和授权操作  
 3.使用OAuth2进行数据接口授权  
 为科研管理系统提供数据接口，使用OAuth2客户端模式验证不同学校身份  
 4.前端组件化开发  
@@ -78,7 +81,7 @@ SpringBoot、SpringSecurity、SpringOAuth、MongoDB、Redis、MySQL、ActiveMQ�
 论文认领平台微信小程序端，向老师推送论文认领信息，老师使用小程序在线查看、认领等
 ##### 涉及技术
 WeUI、Vant、SpringBoot、JWT、SpringDataJPA、Redis、MySQL、ActiveMQ等
-#### 责任描述
+##### 责任描述
 1.小程序登陆
 通过扫码或者人员绑定登陆系统，通过小程序openid绑定用户信息，组装JWT作为前后台身份认证  
 2.开发微信消息通知功能
@@ -86,7 +89,7 @@ WeUI、Vant、SpringBoot、JWT、SpringDataJPA、Redis、MySQL、ActiveMQ等
 ### 公司大项目开发（ 2017年1月 ~ 至今 ）
 ##### 项目描述
 对于公司的重点客户，包括清华大学、北京航空航天大学、华南理工、湖南大学、香港中文大学等，参与复杂任务的设计和开发，以及重点业务底层框架支持
-#### 责任描述
+##### 责任描述
 其中比较有特点的任务如下:  
 1.高可用和负载均衡方案
 为满足清华大学合同性能指标和可靠性要求，改造项目，通过Keepalived+Nginx完成web服务高可用，通过nginx+tomcat实现负载均衡，通过spring-session-data-redis实现session共享，通过redis+springcache实现本地缓存共享，利用redis分布式锁控制定时任务等只执行一次  
