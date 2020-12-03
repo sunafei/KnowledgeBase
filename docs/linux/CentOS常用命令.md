@@ -40,6 +40,8 @@ firewall-cmd --reload   # 配置立即生效
 firewall-cmd --zone=public --list-ports
 # 关闭防火墙
 systemctl stop firewalld.service
+# 禁止防火墙开机启动
+systemctl disable firewalld.service
 # 查看防火墙状态
 firewall-cmd --state
 # 查看监听的端口

@@ -6,7 +6,7 @@ Imp username/password@localhost:1521/orcl file=c:\xxx.dmp full=y log=c:\xxx.
 exp username/password@orcl file=c:\xxx.dmp grants=no consistent=y
 ```
 
-### cmd登陆sys用户
+### cmd登陆sys用户  
 ```
 sqlplus
 sys
@@ -16,7 +16,7 @@ password as sysdba
 ### 创建数据库
 ```
 -- 创建表空间
-create tablespace xxx
+create tablespace *xxx*
 logging
 datafile 'C:\ORADBDATA\xxx.ora'
 size 50m
@@ -25,10 +25,10 @@ next 50m maxsize 20480m
 extent management local;
 
 -- 创建用户
-create user username profile default identified by password default tablespace xxx;
+create user *username* profile default identified by *password* default tablespace *xxx*;
 
 -- 给用户授权
-grant connect,resource,dba to username;
+grant connect,resource,dba to *username*;
 
 -- 删除表空间
 Drop tablespace username INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
@@ -36,3 +36,10 @@ Drop tablespace username INCLUDING CONTENTS AND DATAFILES CASCADE CONSTRAINTS;
 -- 删除用户
 drop user username cascade;
 ```
+
+
+
+exp RDSYSEDUV8_TSINGHUA/eplugger@orcl file=c:\xxxxxx.dmp grants=no consistent=y
+Imp RDSYSEDUV8_TSINGHUA/eplugger@localhost:1521/orcl file=1012.dmp full=y log=1012.txt
+
+select * from dba_constraints where constraint_name='xxx' and constraint_type = 'R';
